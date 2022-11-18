@@ -40,7 +40,7 @@ public class UsersController {
 
     @GetMapping("/populate")
     public String populateDb(){
-        ResponseEntity<Object[]> response = restTemplate.getForEntity(appPropreties.getURI(), Object[].class);
+        ResponseEntity<Object[]> response = restTemplate.getForEntity(appPropreties.getUri(), Object[].class);
         List<Users> users = Arrays.stream(response.getBody())
                 .map(obj -> objectMapper.convertValue(obj, Users.class))
                 .collect(Collectors.toList());

@@ -1,6 +1,6 @@
 package com.example.fakerwithauthorization.security.jwt;
 
-import com.example.fakerwithauthorization.security.services.UserDetailsImpl;
+import com.example.fakerwithauthorization.services.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
