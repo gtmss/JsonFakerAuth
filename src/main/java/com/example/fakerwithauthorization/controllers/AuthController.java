@@ -2,7 +2,7 @@ package com.example.fakerwithauthorization.controllers;
 
 import com.example.fakerwithauthorization.models.ERole;
 import com.example.fakerwithauthorization.models.Roles;
-import com.example.fakerwithauthorization.models.TokenResponseDTO;
+import com.example.fakerwithauthorization.services.dto.TokenResponseDTO;
 import com.example.fakerwithauthorization.models.User;
 import com.example.fakerwithauthorization.security.jwt.payload.request.LoginRequest;
 import com.example.fakerwithauthorization.security.jwt.payload.request.SignupRequest;
