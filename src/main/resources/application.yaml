@@ -4,10 +4,7 @@ spring:
     username: gatman
     password: gatman
 
-jwt:
-  jwtCookie: jsonfaker
+faker:
+  uri: https://jsonplaceholder.typicode.com/users
   jwtSecret: jsonfakerSecretKey
   jwtExpirationMs: 1800000 #30 min
-
-props:
-  URI: https://jsonplaceholder.typicode.com/users

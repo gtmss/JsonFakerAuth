@@ -1,4 +1,4 @@
-package com.example.fakerwithauthorization.models;
+package com.example.fakerwithauthorization.services.dto;
 
 public class TokenResponseDTO {
     private String token;

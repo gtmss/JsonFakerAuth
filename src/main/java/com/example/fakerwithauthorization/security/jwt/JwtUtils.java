@@ -1,10 +1,10 @@
 package com.example.fakerwithauthorization.security.jwt;
 
-import com.example.fakerwithauthorization.security.services.UserDetailsImpl;
+import com.example.fakerwithauthorization.config.AppPropreties;
+import com.example.fakerwithauthorization.services.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
@@ -14,11 +14,11 @@ import java.util.Date;
 public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
-    @Value("${jwt.jwtSecret}")
-    private String jwtSecret;
+   private final AppPropreties appPropreties;
 
-    @Value("${jwt.jwtExpirationMs}")
-    private int jwtExpirationMs;
+    public JwtUtils(AppPropreties appPropreties) {
+        this.appPropreties = appPropreties;
+    }
 
     public String generateJwtToken(Authentication authentication) {
         System.out.println("generate token called  ");
@@ -27,21 +27,21 @@ public class JwtUtils {
         return Jwts.builder()
                 .setSubject((userPricipal.getUsername()))
                 .setIssuedAt(new Date())
-                .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
-                .signWith(SignatureAlgorithm.HS512, jwtSecret)
+                .setExpiration(new Date((new Date()).getTime() + appPropreties.getJwtExpirationMs()))
+                .signWith(SignatureAlgorithm.HS512, appPropreties.getJwtSecret())
                 .compact();
     }
 
         public String getUsernameFromJwtToken(String token) {
             return Jwts.parser()
-                    .setSigningKey(jwtSecret)
+                    .setSigningKey(appPropreties.getJwtSecret())
                     .parseClaimsJws(token)
                     .getBody().getSubject();
         }
 
         public boolean validateJwtToken(String authToken) {
             try {
-                Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(authToken);
+                Jwts.parser().setSigningKey(appPropreties.getJwtSecret()).parseClaimsJws(authToken);
                 return true;
             } catch (SignatureException e) {
                 logger.error("Invalid HWT signature: {}", e.getMessage());

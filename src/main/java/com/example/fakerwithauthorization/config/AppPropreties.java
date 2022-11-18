@@ -6,16 +6,38 @@ import org.springframework.context.annotation.Configuration;
 import javax.validation.constraints.NotNull;
 
 @Configuration
-@ConfigurationProperties(prefix = "props", ignoreUnknownFields = false)
+@ConfigurationProperties(prefix = "faker", ignoreUnknownFields = false)
 public class AppPropreties {
     @NotNull
-    private String URI;
+    private String uri;
 
-    public String getURI() {
-        return URI;
+    @NotNull
+    private String jwtSecret;
+
+    @NotNull
+    private Long jwtExpirationMs;
+
+    public String getJwtSecret() {
+        return jwtSecret;
     }
 
-    public void setURI(String URI) {
-        this.URI = URI;
+    public void setJwtSecret(String jwtSecret) {
+        this.jwtSecret = jwtSecret;
+    }
+
+    public Long getJwtExpirationMs() {
+        return jwtExpirationMs;
+    }
+
+    public void setJwtExpirationMs(Long jwtExpirationMs) {
+        this.jwtExpirationMs = jwtExpirationMs;
+    }
+
+    public String getUri() {
+        return uri;
+    }
+
+    public void setUri(String uri) {
+        this.uri = uri;
     }
 }

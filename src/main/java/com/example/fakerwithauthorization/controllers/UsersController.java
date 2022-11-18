@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("api/user")
 public class UsersController {
 
     private final UsersRepository usersRepository;
@@ -40,7 +40,7 @@ public class UsersController {
 
     @GetMapping("/populate")
     public String populateDb(){
-        ResponseEntity<Object[]> response = restTemplate.getForEntity(appPropreties.getURI(), Object[].class);
+        ResponseEntity<Object[]> response = restTemplate.getForEntity(appPropreties.getUri(), Object[].class);
         List<Users> users = Arrays.stream(response.getBody())
                 .map(obj -> objectMapper.convertValue(obj, Users.class))
                 .collect(Collectors.toList());

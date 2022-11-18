@@ -2,6 +2,7 @@ package com.example.fakerwithauthorization.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Objects;
 
 @Entity
 @Table(name = "geo")
@@ -20,13 +21,6 @@ public class Geo {
 
     }
 
-    
-
-    public Geo(Long id, Double lat, Double lng) {
-        this.id = id;
-        this.lat = lat;
-        this.lng = lng;
-    }
 
     public Long getId() {
         return id;
@@ -50,5 +44,27 @@ public class Geo {
 
     public void setLng(Double lng) {
         this.lng = lng;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Geo geo = (Geo) o;
+        return Objects.equals(id, geo.id) && Objects.equals(lat, geo.lat) && Objects.equals(lng, geo.lng);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, lat, lng);
+    }
+
+    @Override
+    public String toString() {
+        return "Geo{" +
+                "id=" + id +
+                ", lat=" + lat +
+                ", lng=" + lng +
+                '}';
     }
 }
