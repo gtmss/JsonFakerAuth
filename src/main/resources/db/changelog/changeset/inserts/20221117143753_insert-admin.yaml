@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-admin
+      author: Ion
+      changes:
+        - insert:
+            tableName: system_users
+            columns:
+              - column:
+                  name: username
+                  value: admin
+              - column:
+                  name: email
+                  value: admin@support.com
+              - column:
+                  name: password
+                  #admin
+                  value: $2a$12$O2SNuCA1STyZaxXvdRN5BO6Xpx7owEwwWRWtBfeX6EMIMn4ohm99O
+        - insert:
+            tableName: user_roles
+            columns:
+              - column:
+                  name: user_id
+                  value: 1
+              - column:
+                  name: role_id
+                  value: 1
+

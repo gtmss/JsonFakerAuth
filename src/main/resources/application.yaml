@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auth_db
+    username: gatman
+    password: gatman
+
+jwt:
+  jwtCookie: jsonfaker
+  jwtSecret: jsonfakerSecretKey
+  jwtExpirationMs: 1800000 #30 min
+
+props:
+  URI: https://jsonplaceholder.typicode.com/users

@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-users
+      author: Ion
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phone
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: website
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: address_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_address_id
+                    referencedTableName: address
+                    referencedColumnNames: id
+              - column:
+                  name: company_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_company_id
+                    referencedTableName: company
+                    referencedColumnNames: id
+
+
+
+

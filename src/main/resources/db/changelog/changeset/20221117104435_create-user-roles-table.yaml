@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-roles-table
+      author: Ion
+      changes:
+        - createTable:
+            tableName: user_roles
+            columns:
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_user_id
+                    referencedTableName: system_users
+                    referencedColumnNames: id
+              - column:
+                  name: role_id
+                  type: int
+                  constraints:
+                    foreignKeyName: fk_role_id
+                    referencedTableName: roles
+                    referencedColumnNames: id
+
+
+

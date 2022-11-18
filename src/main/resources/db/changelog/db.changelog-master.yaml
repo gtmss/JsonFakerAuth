@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/20221031094107_create-geo-table.yaml
+  - include:
+      file: db/changelog/changeset/20223110091434_create-address-table.yaml
+  - include:
+      file: db/changelog/changeset/20221031102053_create-company-table.yaml
+  - include:
+      file: db/changelog/changeset/20221031103854_create-users-table.yaml
+  - include:
+      file: db/changelog/changeset/20221104150802_create-roles-table.yaml
+  - include:
+      file: db/changelog/changeset/20221116200416_create-system-user-table.yaml
+  - include:
+      file: db/changelog/changeset/20221117104435_create-user-roles-table.yaml
+  - include:
+      file: db/changelog/changeset/inserts/20221117141103_insert-in-roles-table.yaml
+  - include:
+      file: db/changelog/changeset/inserts/20221117143753_insert-admin.yaml
+
+      

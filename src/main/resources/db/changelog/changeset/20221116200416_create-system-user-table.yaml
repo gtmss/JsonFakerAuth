@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-system-users
+      author: Ion
+      changes:
+        - createTable:
+            tableName: system_users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: username
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: email
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: password
+                  type: varchar(120)
+                  constraints:
+                    nullable: false
+                    unique: true
