@@ -1,4 +1,4 @@
-package com.example.fakerwithauthorization.payload.request;
+package com.example.fakerwithauthorization.security.jwt.payload.request;
 
 import javax.validation.constraints.NotBlank;
 

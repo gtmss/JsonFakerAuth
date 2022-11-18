@@ -5,6 +5,7 @@ import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Objects;
 
 @Entity
 @Validated
@@ -112,6 +113,33 @@ public class Users {
         this.website = website;
         this.address = address;
         this.company = company;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Users users = (Users) o;
+        return Objects.equals(id, users.id) && Objects.equals(name, users.name) && Objects.equals(username, users.username) && Objects.equals(email, users.email) && Objects.equals(phone, users.phone) && Objects.equals(website, users.website) && Objects.equals(address, users.address) && Objects.equals(company, users.company);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, username, email, phone, website, address, company);
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", website='" + website + '\'' +
+                ", address=" + address +
+                ", company=" + company +
+                '}';
     }
 }
 

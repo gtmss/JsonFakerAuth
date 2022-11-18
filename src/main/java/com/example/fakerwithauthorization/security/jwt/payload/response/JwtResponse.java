@@ -1,4 +1,4 @@
-package com.example.fakerwithauthorization.payload.response;
+package com.example.fakerwithauthorization.security.jwt.payload.response;
 
 import java.util.List;
 
