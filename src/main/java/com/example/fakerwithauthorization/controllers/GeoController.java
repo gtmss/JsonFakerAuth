@@ -2,7 +2,10 @@ package com.example.fakerwithauthorization.controllers;
 
 import com.example.fakerwithauthorization.models.Geo;
 import com.example.fakerwithauthorization.repository.GeoRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/geo")
@@ -13,25 +16,24 @@ public class GeoController {
         this.geoRepository = geoRepository;
     }
 
-    @PostMapping("/add")
-    public String addGeo(@RequestBody Geo geo){
-        geoRepository.save(geo);
-        return "saved";
+    @PostMapping
+    public ResponseEntity<?> addGeo(@RequestBody Geo geo){
+        return ResponseEntity.ok().body(geoRepository.save(geo).getId());
     }
 
-    @GetMapping("/get")
-    public Iterable<Geo> getAll(){
-        return geoRepository.findAll();
+    @GetMapping
+    public ResponseEntity<List<Geo>> getAll(){
+        return ResponseEntity.ok().body(geoRepository.findAll());
     }
 
-    @PutMapping("/update")
-    public Geo updateGeo(@RequestBody Geo geo){
-        return geoRepository.save(geo);
+    @PutMapping
+    public ResponseEntity<Geo> updateGeo(@RequestBody Geo geo){
+        return ResponseEntity.ok().body(geoRepository.save(geo));
     }
 
-    @DeleteMapping("/delete/{id}")
-    public String deleteGeo(@PathVariable Long id){
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteGeo(@PathVariable Long id){
         geoRepository.deleteById(id);
-        return "Ok";
+        return ResponseEntity.ok().build();
     }
 }

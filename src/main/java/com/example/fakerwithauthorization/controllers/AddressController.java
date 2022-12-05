@@ -15,7 +15,7 @@ public class AddressController {
         this.addressRepository = addressRepository;
     }
 
-    @PostMapping("/add")
+    @PostMapping
     public String addAdress(@RequestBody Address address){
         System.out.println(address.toString());
         addressRepository.save(address);
@@ -27,13 +27,13 @@ public class AddressController {
         return addressRepository.findAll();
     }
 
-    @PutMapping("/update")
+    @PutMapping
     public Address updateAdress(@RequestBody Address address){
         addressRepository.save(address);
         return address;
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public String deleteAdress(@PathVariable Long id){
         addressRepository.deleteById(id);
         return "Deleted";

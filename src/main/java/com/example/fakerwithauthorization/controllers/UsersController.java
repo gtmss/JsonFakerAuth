@@ -4,6 +4,7 @@ import com.example.fakerwithauthorization.config.AppPropreties;
 import com.example.fakerwithauthorization.models.Users;
 import com.example.fakerwithauthorization.repository.UsersRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -32,36 +33,36 @@ public class UsersController {
         this.appPropreties = appPropreties;
     }
 
-    @PostMapping("/add")
-    public String addUser( @Valid @RequestBody Users user){
+    @PostMapping
+    public ResponseEntity<Void> addUser( @Valid @RequestBody Users user){
         usersRepository.save(user);
-        return "Added";
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/populate")
-    public String populateDb(){
+    public ResponseEntity<Void> populateDb(){
         ResponseEntity<Object[]> response = restTemplate.getForEntity(appPropreties.getUri(), Object[].class);
         List<Users> users = Arrays.stream(response.getBody())
                 .map(obj -> objectMapper.convertValue(obj, Users.class))
                 .collect(Collectors.toList());
         usersRepository.saveAll(users);
-        return"Ok";
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("/get")
-    public List<Users> getUsers() {
-        return (List<Users>) usersRepository.findAll();
+    @GetMapping
+    public ResponseEntity<List<Users>> getUsers() {
+        return ResponseEntity.ok().body(usersRepository.findAll());
     }
 
-    @PutMapping("/update")
-    public String updateUsers(@RequestBody Users users){
+    @PutMapping
+    public ResponseEntity<Void> updateUsers(@RequestBody Users users){
         usersRepository.save(users);
-        return "Updated";
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public String deleteUsers(@PathVariable Long id){
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteUsers(@PathVariable Long id){
         usersRepository.deleteById(id);
-        return "Deleted";
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

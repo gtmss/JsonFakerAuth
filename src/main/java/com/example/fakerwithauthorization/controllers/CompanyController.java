@@ -2,7 +2,10 @@ package com.example.fakerwithauthorization.controllers;
 
 import com.example.fakerwithauthorization.models.Company;
 import com.example.fakerwithauthorization.repository.CompanyRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/company")
@@ -14,16 +17,15 @@ public class CompanyController {
         this.companyRepository = companyRepository;
     }
 
-    @PostMapping("/add")
-    public String addCompany(@RequestBody Company company){
-        System.out.println(company.toString());
+    @PostMapping
+    public ResponseEntity<Void> addCompany(@RequestBody Company company){
         companyRepository.save(company);
-        return "Added";
+        return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/get")
-    public Iterable<Company> getAllCompanies(){
-        return companyRepository.findAll();
+    @GetMapping
+    public ResponseEntity<List<Company>> getAllCompanies(){
+        return ResponseEntity.ok().body(companyRepository.findAll());
     }
 
 
