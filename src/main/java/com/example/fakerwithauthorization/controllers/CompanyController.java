@@ -2,6 +2,8 @@ package com.example.fakerwithauthorization.controllers;
 
 import com.example.fakerwithauthorization.models.Company;
 import com.example.fakerwithauthorization.repository.CompanyRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,8 +26,8 @@ public class CompanyController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Company>> getAllCompanies(){
-        return ResponseEntity.ok().body(companyRepository.findAll());
+    public ResponseEntity<Page<Company>> getAllCompanies(Pageable pageable){
+        return ResponseEntity.ok().body(companyRepository.findAll(pageable));
     }
 
 

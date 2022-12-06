@@ -2,6 +2,8 @@ package com.example.fakerwithauthorization.controllers;
 
 import com.example.fakerwithauthorization.models.Geo;
 import com.example.fakerwithauthorization.repository.GeoRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,8 +24,8 @@ public class GeoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Geo>> getAll(){
-        return ResponseEntity.ok().body(geoRepository.findAll());
+    public ResponseEntity<Page<Geo>> getAll(Pageable pageable){
+        return ResponseEntity.ok().body(geoRepository.findAll(pageable));
     }
 
     @PutMapping

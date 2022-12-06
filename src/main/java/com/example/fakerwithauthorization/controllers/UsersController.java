@@ -4,6 +4,10 @@ import com.example.fakerwithauthorization.config.AppPropreties;
 import com.example.fakerwithauthorization.models.Users;
 import com.example.fakerwithauthorization.repository.UsersRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -50,8 +54,8 @@ public class UsersController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Users>> getUsers() {
-        return ResponseEntity.ok().body(usersRepository.findAll());
+    public ResponseEntity<Page<Users>> getUsers(Pageable pageable) {
+        return ResponseEntity.ok().body((usersRepository.findAll(pageable)));
     }
 
     @PutMapping
