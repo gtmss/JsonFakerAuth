@@ -4,7 +4,12 @@ spring:
     username: gatman
     password: gatman
 
+
 faker:
   uri: https://jsonplaceholder.typicode.com/users
   jwtSecret: jsonfakerSecretKey
   jwtExpirationMs: 1800000 #30 min
+
+logging:
+  file:
+    path: src/main/resoureces/faker.log
