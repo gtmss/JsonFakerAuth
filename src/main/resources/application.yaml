@@ -3,6 +3,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/auth_db
     username: gatman
     password: gatman
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 
 faker:
