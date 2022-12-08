@@ -7,7 +7,6 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
 
-
 faker:
   uri: https://jsonplaceholder.typicode.com/users
   jwtSecret: jsonfakerSecretKey
@@ -16,3 +15,4 @@ faker:
 logging:
   file:
     path: src/main/resoureces/faker.log
+

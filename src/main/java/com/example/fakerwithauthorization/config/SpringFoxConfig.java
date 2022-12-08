@@ -16,12 +16,14 @@ import java.util.List;
 
 @Configuration
 public class SpringFoxConfig {
+    public static final String AUTHORIZATION_HEADER = "Authorization";
+
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .securityContexts(Arrays.asList(securityContext()))
-                .securitySchemes(Arrays.asList(apiKey()))
+                .securitySchemes(Arrays.asList(new ApiKey("Authorization","Authorization","header")))
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
@@ -29,7 +31,7 @@ public class SpringFoxConfig {
     }
 
     private ApiKey apiKey() {
-        return new ApiKey("JWT", "Authorization: Bearer", "header");
+        return new ApiKey("JWT", AUTHORIZATION_HEADER, "header");
     }
 
     private SecurityContext securityContext() {
@@ -40,7 +42,7 @@ public class SpringFoxConfig {
         AuthorizationScope authorizationScope = new AuthorizationScope("global", "accessEverything");
         AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
         authorizationScopes[0] = authorizationScope;
-        return Arrays.asList(new SecurityReference("JWT", authorizationScopes));
+        return Arrays.asList(new SecurityReference("Authorization", authorizationScopes));
     }
 
     private ApiInfo apiInfo() {
