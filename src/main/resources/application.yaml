@@ -1,8 +1,11 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5433/auth_db
-    username: gatman
-    password: gatman
+#    datasource:
+#      url: jdbc:postgresql://db:5432/postgres
+#      username: postgres
+#      password: postgres
+
+server:
+  port: 8080
 
 faker:
   uri: https://jsonplaceholder.typicode.com/users
