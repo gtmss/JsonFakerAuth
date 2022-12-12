@@ -1,4 +1,5 @@
 spring:
+
 #    datasource:
 #      url: jdbc:postgresql://db:5432/postgres
 #      username: postgres
@@ -6,6 +7,8 @@ spring:
 
 server:
   port: 8080
+
+
 
 faker:
   uri: https://jsonplaceholder.typicode.com/users
@@ -15,3 +18,4 @@ faker:
 logging:
   file:
     path: src/main/resoureces/faker.log
+

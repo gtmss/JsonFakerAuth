@@ -4,6 +4,7 @@ import com.example.fakerwithauthorization.config.AppPropreties;
 import com.example.fakerwithauthorization.models.Users;
 import com.example.fakerwithauthorization.repository.UsersRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.swagger.annotations.ApiImplicitParam;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
