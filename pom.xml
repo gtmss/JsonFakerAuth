@@ -15,8 +15,7 @@
     <description>FakerWithAuthorization</description>
     <properties>
         <java.version>17</java.version>
-        <jib.username>gtmss</jib.username>
-        <jib.password>Ageandyouth2018</jib.password>
+
     </properties>
     <dependencies>
         <dependency>
@@ -111,17 +110,11 @@
                 <configuration>
                     <from>
                         <image>openjdk:17</image>
-                        <auth>
-                            <username>${jib.username}</username>
-                            <password>${jib.password}</password>
-                        </auth>
+
                     </from>
                     <to>
                         <image>gtmss/jsonfakergatman:latest</image>
-                        <auth>
-                            <username>${jib.username}</username>
-                            <password>${jib.password}</password>
-                        </auth>
+
                     </to>
                     <container>
                         <ports>

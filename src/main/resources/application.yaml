@@ -14,7 +14,6 @@ server:
   port: 8080
 
 
-
 faker:
   uri: https://jsonplaceholder.typicode.com/users
   jwtSecret: jsonfakerSecretKey
