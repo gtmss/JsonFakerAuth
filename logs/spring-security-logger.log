@@ -1,25 +1,130 @@
-
-2022-12-08 20:09:01,439 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 20:26:16,953 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 20:30:22,496 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 20:33:11,092 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 20:35:08,696 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 20:41:34,637 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 20:46:09,712 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 21:01:01,048 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 21:26:55,470 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 21:28:06,019 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 21:34:45,660 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 22:48:03,395 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 22:50:17,545 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 22:51:19,112 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 22:52:54,016 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 22:53:12,411 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 22:54:02,053 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 22:54:44,486 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 22:59:56,613 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 23:03:04,558 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 23:06:52,826 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 23:10:18,433 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-2022-12-08 23:10:31,814 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
-
+2022-12-13 16:57:52,112 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
+2022-12-13 18:31:29,795 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
+2022-12-13 18:32:18,306 ERROR com.example.fakerwithauthorization.security.jwt.AuthTokenFilter [http-nio-8080-exec-1] Cannot set user authentication: {}
+org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : com.example.fakerwithauthorization.models.User; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : com.example.fakerwithauthorization.models.User
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:331)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy127.findByUsername(Unknown Source)
+	at com.example.fakerwithauthorization.services.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:20)
+	at com.example.fakerwithauthorization.services.UserDetailsServiceImpl$$FastClassBySpringCGLIB$$2e7fe227.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.example.fakerwithauthorization.services.UserDetailsServiceImpl$$EnhancerBySpringCGLIB$$93963160.loadUserByUsername(<generated>)
+	at com.example.fakerwithauthorization.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.hibernate.InstantiationException: No default constructor for entity:  : com.example.fakerwithauthorization.models.User
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:85)
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:105)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.instantiate(AbstractEntityTuplizer.java:705)
+	at org.hibernate.persister.entity.AbstractEntityPersister.instantiate(AbstractEntityPersister.java:5295)
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1643)
+	at org.hibernate.loader.Loader.instanceNotYetLoaded(Loader.java:1774)
+	at org.hibernate.loader.Loader.getRow(Loader.java:1624)
+	at org.hibernate.loader.Loader.getRowFromResultSet(Loader.java:748)
+	at org.hibernate.loader.Loader.getRowsFromResultSet(Loader.java:1047)
+	at org.hibernate.loader.Loader.processResultSet(Loader.java:998)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:967)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357)
+	at org.hibernate.loader.Loader.doList(Loader.java:2868)
+	at org.hibernate.loader.Loader.doList(Loader.java:2850)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2682)
+	at org.hibernate.loader.Loader.list(Loader.java:2677)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:540)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1459)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617)
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1665)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getSingleResult(CriteriaQueryTypeQueryAdapter.java:111)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:198)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 76 common frames omitted
+2022-12-13 18:47:51,100 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
+2022-12-13 18:53:29,055 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'authenticationJwtTokenFilter' configured for use
