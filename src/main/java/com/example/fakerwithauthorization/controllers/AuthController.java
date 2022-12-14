@@ -10,6 +10,8 @@ import com.example.fakerwithauthorization.security.jwt.payload.response.MessageR
 import com.example.fakerwithauthorization.repository.RoleRepository;
 import com.example.fakerwithauthorization.repository.UserRepository;
 import com.example.fakerwithauthorization.security.jwt.JwtUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -27,6 +29,8 @@ import java.util.Set;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
+
+    Logger logger = LoggerFactory.getLogger(AuthController.class);
 
     final
     AuthenticationManager authenticationManager;
@@ -58,10 +62,14 @@ public class AuthController {
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtUtils.generateJwtToken(authentication);
-        System.out.println(jwt);
-        System.out.println(authentication);
+
+        logger.debug("Bearer " + jwt);
+        logger.debug("Authentification: " + authentication);
+        logger.debug("USERNAME: " + loginRequest.getUsername());
+        logger.debug("ROLE: " + userRepository.findByUsername(loginRequest.getUsername()).get().getRoles());
 
         return ResponseEntity.ok(new TokenResponseDTO(jwt));
+
     }
 
     @PostMapping("/signup")
@@ -114,7 +122,7 @@ public class AuthController {
         }
 
         user.setRoles(roles);
-        userRepository.save(user);
+        logger.debug("New user added: " + userRepository.save(user));
 
         return ResponseEntity.ok(new MessageResponse("User registred succesfully"));
     }
