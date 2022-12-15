@@ -94,6 +94,11 @@
             <version>3.0.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -110,11 +115,9 @@
                 <configuration>
                     <from>
                         <image>openjdk:17</image>
-
                     </from>
                     <to>
                         <image>gtmss/jsonfakergatman:latest</image>
-
                     </to>
                     <container>
                         <ports>
