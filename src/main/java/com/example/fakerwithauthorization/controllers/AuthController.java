@@ -2,6 +2,7 @@ package com.example.fakerwithauthorization.controllers;
 
 import com.example.fakerwithauthorization.models.ERole;
 import com.example.fakerwithauthorization.models.Roles;
+import com.example.fakerwithauthorization.services.SimpleMailManager;
 import com.example.fakerwithauthorization.services.dto.TokenResponseDTO;
 import com.example.fakerwithauthorization.models.User;
 import com.example.fakerwithauthorization.security.jwt.payload.request.LoginRequest;
@@ -47,12 +48,17 @@ public class AuthController {
     final
     JwtUtils jwtUtils;
 
-    public AuthController(AuthenticationManager authenticationManager, UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder encoder, JwtUtils jwtUtils) {
+    final SimpleMailManager simpleMailManager;
+
+    
+
+    public AuthController(AuthenticationManager authenticationManager, UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder encoder, JwtUtils jwtUtils, SimpleMailManager simpleMailManager) {
         this.authenticationManager = authenticationManager;
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.encoder = encoder;
         this.jwtUtils = jwtUtils;
+        this.simpleMailManager = simpleMailManager;
     }
 
     @PostMapping("/signin")
@@ -122,9 +128,16 @@ public class AuthController {
         }
 
         user.setRoles(roles);
+
         logger.debug("New user added: " + userRepository.save(user));
+        logger.debug("Sending credentials via e-mail...");
+        sendMail(user, signupRequest.getPassword());
 
         return ResponseEntity.ok(new MessageResponse("User registred succesfully"));
+    }
+
+    public void sendMail(User user, String pass){
+        simpleMailManager.sendSimpleMessage(user, pass);
     }
 
 }
