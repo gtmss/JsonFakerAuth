@@ -7,37 +7,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.stereotype.Component;
 
-public class SimpleMailManager {
+@Component
+public class SimpleMailManager{
     Logger logger = LoggerFactory.getLogger(SimpleMailManager.class);
 
-    private MailSender mailSender;
-    private SimpleMailMessage templateMessage;
+    @Autowired
+    private JavaMailSender mailSender;
 
-    public void setMailSender(MailSender mailSender) {
-        this.mailSender = mailSender;
-    }
+    public void sendSimpleMessage(String to, String subject, String text) {
 
-    public void setTemplateMessage(SimpleMailMessage templateMessage) {
-        this.templateMessage = templateMessage;
-    }
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("vaniagatman@gmail.com");
+        message.setTo(to);
+        message.setSubject(subject);
+        message.setText(text);
+        mailSender.send(message);
 
-    public void sendCredentials(User user) {
-        SimpleMailMessage msg = new SimpleMailMessage(this.templateMessage);
-        msg.setTo(user.getEmail());
-        msg.setText(
-                "Dear" + user.getUsername()
-                + ", thank you for registration. Your ROLE is "
-                + user.getRoles()
-                + "\n Your password" + user.getPassword()
-                + "please, take care."
-        );
-
-        try{
-            this.mailSender.send(msg);
-        }
-        catch (MailException ex) {
-            logger.error(ex.getMessage());
-        }
     }
 }

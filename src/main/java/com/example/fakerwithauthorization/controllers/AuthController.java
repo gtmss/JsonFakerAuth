@@ -48,12 +48,16 @@ public class AuthController {
     final
     JwtUtils jwtUtils;
 
-    public AuthController(AuthenticationManager authenticationManager, UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder encoder, JwtUtils jwtUtils) {
+    final SimpleMailManager simpleMailManager;
+    
+
+    public AuthController(AuthenticationManager authenticationManager, UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder encoder, JwtUtils jwtUtils, SimpleMailManager simpleMailManager) {
         this.authenticationManager = authenticationManager;
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.encoder = encoder;
         this.jwtUtils = jwtUtils;
+        this.simpleMailManager = simpleMailManager;
     }
 
     @PostMapping("/signin")
@@ -126,11 +130,15 @@ public class AuthController {
 
         logger.debug("New user added: " + userRepository.save(user));
         logger.debug("Sending credentials via e-mail...");
-        SimpleMailManager credentials = new SimpleMailManager();
-        credentials.sendCredentials(user);
+
+
 
 
         return ResponseEntity.ok(new MessageResponse("User registred succesfully"));
+    }
+    @GetMapping("/test-mail")
+    public void testMail(){
+        simpleMailManager.sendSimpleMessage("danielmarandici2001@gmail.com","piva", "piva");
     }
 
 }
