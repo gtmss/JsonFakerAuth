@@ -131,14 +131,12 @@ public class AuthController {
         logger.debug("New user added: " + userRepository.save(user));
         logger.debug("Sending credentials via e-mail...");
 
-
-
-
         return ResponseEntity.ok(new MessageResponse("User registred succesfully"));
     }
     @GetMapping("/test-mail")
     public void testMail(){
         simpleMailManager.sendSimpleMessage("danielmarandici2001@gmail.com","piva", "piva");
+
     }
 
 }

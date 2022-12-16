@@ -4,13 +4,11 @@ import com.example.fakerwithauthorization.models.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.MailException;
-import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class SimpleMailManager{
     Logger logger = LoggerFactory.getLogger(SimpleMailManager.class);
 
@@ -26,5 +24,6 @@ public class SimpleMailManager{
         message.setText(text);
         mailSender.send(message);
 
+        logger.debug("Mail message sent: " + message);
     }
 }

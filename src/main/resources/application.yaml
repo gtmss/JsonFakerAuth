@@ -1,25 +1,23 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: gatman
+    password: gatman
 
-     datasource:
-       url: jdbc:postgresql://localhost:5432/postgres
-       username: gatman
-       password: gatman
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
-     mvc:
-      pathmatch:
-        matching-strategy: ant_path_matcher
-
-     mail:
-       host: smtp.gmail.com
-       port: 587
-       username: vaniagatman@gmail.com
-       password: sffakyrofiixmbut
-       properties:
-         smtp:
-           auth: true
-           starttls:
-             enable: true
-
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: vaniagatman@gmail.com
+    password: sffakyrofiixmbut
+    protocol: smtp
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
 server:
   port: 8080
 
