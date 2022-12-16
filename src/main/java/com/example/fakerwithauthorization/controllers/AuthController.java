@@ -49,6 +49,7 @@ public class AuthController {
     JwtUtils jwtUtils;
 
     final SimpleMailManager simpleMailManager;
+
     
 
     public AuthController(AuthenticationManager authenticationManager, UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder encoder, JwtUtils jwtUtils, SimpleMailManager simpleMailManager) {
@@ -130,13 +131,13 @@ public class AuthController {
 
         logger.debug("New user added: " + userRepository.save(user));
         logger.debug("Sending credentials via e-mail...");
+        sendMail(user, signupRequest.getPassword());
 
         return ResponseEntity.ok(new MessageResponse("User registred succesfully"));
     }
-    @GetMapping("/test-mail")
-    public void testMail(){
-        simpleMailManager.sendSimpleMessage("danielmarandici2001@gmail.com","piva", "piva");
 
+    public void sendMail(User user, String pass){
+        simpleMailManager.sendSimpleMessage(user, pass);
     }
 
 }
