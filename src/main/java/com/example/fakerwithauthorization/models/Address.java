@@ -1,6 +1,9 @@
 package com.example.fakerwithauthorization.models;
 
+import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 import com.sun.istack.NotNull;
+import liquibase.repackaged.com.opencsv.bean.CsvRecurse;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -13,17 +16,22 @@ public class Address {
     private Long id;
 
     @NotNull
+    @CsvBindByName(column = "street")
     private String street;
     @NotNull
+    @CsvBindByName(column = "suite")
     private String suite;
     @NotNull
+    @CsvBindByName(column = "city")
     private String city;
     @NotNull
+    @CsvBindByName(column = "zipcode")
     private String zipcode;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "geo_id", referencedColumnName = "id")
     @NotNull
+    @CsvRecurse
     private Geo geo;
 
     public Address() {

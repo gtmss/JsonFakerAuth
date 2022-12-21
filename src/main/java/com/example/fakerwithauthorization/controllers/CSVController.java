@@ -1,9 +1,7 @@
 package com.example.fakerwithauthorization.controllers;
 
-import com.example.fakerwithauthorization.repository.GeoRepository;
 import com.example.fakerwithauthorization.repository.UsersRepository;
 import com.example.fakerwithauthorization.services.CsvExportService;
-import com.example.fakerwithauthorization.services.dto.CSVExportDTO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

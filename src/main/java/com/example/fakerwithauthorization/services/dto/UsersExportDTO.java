@@ -3,7 +3,7 @@ package com.example.fakerwithauthorization.services.dto;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvBindByPosition;
 
-public class CSVExportDTO {
+public class UsersExportDTO {
     @CsvBindByPosition(position = 0)
     @CsvBindByName(column = "name")
     private String name;
@@ -39,7 +39,7 @@ public class CSVExportDTO {
     @CsvBindByName(column = "website")
     private String website;
 
-    public CSVExportDTO(String name, String username, String email, String street, String suite, String city, String zipcode, String lat, String lng, String phone, String website) {
+    public UsersExportDTO(String name, String username, String email, String street, String suite, String city, String zipcode, String lat, String lng, String phone, String website) {
         this.name = name;
         this.username = username;
         this.email = email;
