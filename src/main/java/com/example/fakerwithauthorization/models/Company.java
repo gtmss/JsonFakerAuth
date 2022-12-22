@@ -1,6 +1,5 @@
 package com.example.fakerwithauthorization.models;
 
-import com.opencsv.bean.CsvBindByName;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
@@ -13,20 +12,16 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    @CsvBindByName(column = "company_name")
     private String name;
     @NotNull
-    @CsvBindByName
     private String catchPhrase;
     @NotNull
-    @CsvBindByName
     private String bs;
 
     public Company() {
     }
 
-    public Company(Long id, String name, String catchPhrase, String bs) {
-        this.id = id;
+    public Company(String name, String catchPhrase, String bs) {
         this.name = name;
         this.catchPhrase = catchPhrase;
         this.bs = bs;

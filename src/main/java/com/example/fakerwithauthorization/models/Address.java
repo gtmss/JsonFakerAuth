@@ -16,22 +16,17 @@ public class Address {
     private Long id;
 
     @NotNull
-    @CsvBindByName(column = "street")
     private String street;
     @NotNull
-    @CsvBindByName(column = "suite")
     private String suite;
     @NotNull
-    @CsvBindByName(column = "city")
     private String city;
     @NotNull
-    @CsvBindByName(column = "zipcode")
     private String zipcode;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "geo_id", referencedColumnName = "id")
     @NotNull
-    @CsvRecurse
     private Geo geo;
 
     public Address() {

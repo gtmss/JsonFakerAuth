@@ -1,7 +1,5 @@
 package com.example.fakerwithauthorization.models;
 
-import com.opencsv.bean.CsvBindByName;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
@@ -14,17 +12,19 @@ public class Geo {
     private Long id;
 
     @NotNull
-    @CsvBindByName(column = "lat")
     private Double lat;
 
     @NotNull
-    @CsvBindByName(column = "lng")
     private Double lng;
 
     public Geo() {
 
     }
 
+    public Geo(Double lat, Double lng) {
+        this.lat = lat;
+        this.lng = lng;
+    }
 
     public Long getId() {
         return id;

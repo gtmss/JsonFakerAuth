@@ -22,39 +22,26 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    @CsvBindByPosition(position = 0)
-    @CsvBindByName(column = "name")
     private String name;
     @NotNull
-    @CsvBindByPosition(position = 1)
-    @CsvBindByName(column = "username")
     private String username;
     @NotNull
-    @CsvBindByPosition(position = 2)
-    @CsvBindByName(column = "email")
     private String email;
     @NotNull
-    @CsvBindByPosition(position = 3)
-    @CsvBindByName(column = "phone")
     private String phone;
 
     @NotNull
-    @CsvBindByPosition(position = 4)
-    @CsvBindByName(column = "website")
     private String website;
 
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     @NotNull
-    //TODO split columns
-    @CsvBindByName
     private Address address;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "company_id", referencedColumnName = "id")
     @NotNull
-    @CsvRecurse
     private Company company;
 
     public Users() {
