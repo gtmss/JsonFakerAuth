@@ -95,10 +95,18 @@
         </dependency>
 
         <dependency>
+
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
             <version>4.6</version>
         </dependency>
+
+
+
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
 
 
     </dependencies>
@@ -117,11 +125,9 @@
                 <configuration>
                     <from>
                         <image>openjdk:17</image>
-
                     </from>
                     <to>
                         <image>gtmss/jsonfakergatman:latest</image>
-
                     </to>
                     <container>
                         <ports>
