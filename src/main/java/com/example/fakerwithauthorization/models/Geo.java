@@ -21,6 +21,10 @@ public class Geo {
 
     }
 
+    public Geo(Double lat, Double lng) {
+        this.lat = lat;
+        this.lng = lng;
+    }
 
     public Long getId() {
         return id;

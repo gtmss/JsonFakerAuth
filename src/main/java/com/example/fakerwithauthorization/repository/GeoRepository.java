@@ -11,5 +11,5 @@ import java.util.List;
 
 @Repository
 public interface GeoRepository extends JpaRepository<Geo, Long> {
-    Page<Geo> findAll(Pageable pageable);
+    //Page<Geo> findAll(Pageable pageable);
 }
