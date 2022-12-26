@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 public class UsersController {
 
     Logger logger = LoggerFactory.getLogger(UsersController.class);
+
     private final UsersRepository usersRepository;
 
     private final RestTemplate restTemplate;
