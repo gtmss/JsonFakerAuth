@@ -3,6 +3,7 @@ package com.example.fakerwithauthorization.services.dto;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvBindByPosition;
 
+
 public class UsersExportDTO {
     @CsvBindByPosition(position = 0)
     @CsvBindByName(column = "name")
@@ -51,6 +52,9 @@ public class UsersExportDTO {
         this.lng = lng;
         this.phone = phone;
         this.website = website;
+    }
+
+    public UsersExportDTO() {
     }
 
     public String getName() {
