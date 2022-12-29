@@ -1,0 +1,62 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getUsersRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="username" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUsersResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="users" type="tns:soapUsers" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="soapUsers">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+            <xs:element name="website" type="xs:string"/>
+            <xs:element name="address" type="tns:address"/>
+            <xs:element name="company" type="tns:company"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="address">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="street" type="xs:string"/>
+            <xs:element name="suite" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="zipcode" type="xs:string"/>
+            <xs:element name="geo" type="tns:geo"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="company">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="cathphrase" type="xs:string"/>
+            <xs:element name="bs" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="geo">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="lat" type="xs:double"/>
+            <xs:element name="lng" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
