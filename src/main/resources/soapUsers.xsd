@@ -5,7 +5,7 @@
     <xs:element name="getUsersRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="username" type="xs:string"/>
+                <xs:element name="req" type="xs:anyType"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -17,6 +17,23 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <xs:element name="getUserByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUserByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="users" type="tns:soapUsers"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
 
     <xs:complexType name="soapUsers">
         <xs:sequence>

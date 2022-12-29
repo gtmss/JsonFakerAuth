@@ -1,55 +1,41 @@
 package com.example.fakerwithauthorization.endpoints;
 
-import com.example.fakerwithauthorization.generatedSOAP.GetUsersRequest;
-import com.example.fakerwithauthorization.generatedSOAP.GetUsersResponse;
+import com.example.fakerwithauthorization.generatedSOAP.GetUserByIdRequest;
+import com.example.fakerwithauthorization.generatedSOAP.GetUserByIdResponse;
 import com.example.fakerwithauthorization.generatedSOAP.SoapUsers;
 import com.example.fakerwithauthorization.mapper.SimpleSourceDestinationMapper;
 import com.example.fakerwithauthorization.models.Users;
 import com.example.fakerwithauthorization.repository.UsersRepository;
 import org.mapstruct.factory.Mappers;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Optional;
 
 @Endpoint
-public class SoapUsersEndpoint {
-
-    Logger logger = LoggerFactory.getLogger(SoapUsersEndpoint.class);
-
+public class UsersByIdEndpoint {
     private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
 
     private UsersRepository usersRepository;
 
     @Autowired
-    public SoapUsersEndpoint(UsersRepository usersRepository) {
+    public UsersByIdEndpoint(UsersRepository usersRepository) {
         this.usersRepository = usersRepository;
     }
 
-
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getUsersRequest")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getUserByIdRequest")
     @ResponsePayload
-    public GetUsersResponse getUsersResponse (@RequestPayload GetUsersRequest request) {
+    public GetUserByIdResponse getUserByIdResponse (@RequestPayload GetUserByIdRequest request) {
 
         SimpleSourceDestinationMapper mapper = Mappers.getMapper(SimpleSourceDestinationMapper.class);
+        GetUserByIdResponse response = new GetUserByIdResponse();
 
-        GetUsersResponse response = new GetUsersResponse();
-
-        List<SoapUsers> soapUsersList = new ArrayList<>();
-        List<Users> usersList = usersRepository.findAll();
-
-        usersList.forEach(users -> soapUsersList.add(mapper.usersToSoapUsers(users)));
-
-        response.setUsers(soapUsersList);
+        response.setUsers(mapper.usersToSoapUsers(usersRepository.findById(request.getId()).get()));
 
         return response;
+
     }
-
-
 }
