@@ -15,6 +15,7 @@ import java.util.List;
 public class UsersExportService {
     private final UsersRepository usersRepository;
 
+
     public UsersExportService(UsersRepository usersRepository) {
         this.usersRepository = usersRepository;
     }
@@ -42,10 +43,10 @@ public class UsersExportService {
         return userExportDTOList;
     }
 
-    public List<Users> getUsersFromUsersDto(List<UsersExportDTO> usersExportDTOS) {
+    public List<Users> getUsersFromUsersDto(List<UsersExportDTO> usersExportDTO) {
         List<Users> usersList = new ArrayList<>();
         // skip 1 because first column are the names
-        usersExportDTOS.stream().skip(1).forEach(userExportDTO -> usersList.add(
+        usersExportDTO.stream().skip(1).forEach(userExportDTO -> usersList.add(
                 new Users(
                         userExportDTO.getName(),
                         userExportDTO.getUsername(),

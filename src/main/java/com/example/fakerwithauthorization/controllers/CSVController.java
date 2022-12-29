@@ -5,26 +5,34 @@ import com.example.fakerwithauthorization.services.UsersExportService;
 import com.example.fakerwithauthorization.services.csvUtils.CustomMappingStrategy;
 import com.example.fakerwithauthorization.services.dto.UsersExportDTO;
 import com.opencsv.CSVWriter;
+import com.opencsv.bean.CsvToBeanBuilder;
 import com.opencsv.bean.StatefulBeanToCsv;
 import com.opencsv.bean.StatefulBeanToCsvBuilder;
+import org.slf4j.Logger;
 import org.springframework.http.HttpHeaders;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.List;
 
 @RestController
-@RequestMapping("/export")
+@RequestMapping("/csv")
 public class CSVController {
     private final UsersRepository usersRepository;
 
     private UsersExportService exportService;
 
-    public CSVController(UsersRepository usersRepository, UsersExportService exportService) {
+    private final Logger logger;
+
+    public CSVController(UsersRepository usersRepository, UsersExportService exportService, Logger logger) {
         this.usersRepository = usersRepository;
         this.exportService = exportService;
+        this.logger = logger;
     }
 
     @GetMapping
@@ -46,5 +54,23 @@ public class CSVController {
 
 
         writer.write(exportService.getUsers());
+    }
+
+    @PostMapping("/upload-csv")
+    public void uploadCSVFile(@RequestParam("file") MultipartFile file ){
+        if(file.isEmpty()){
+            logger.error("file is empty");
+        } else{
+            try (Reader reader = new BufferedReader(new InputStreamReader(file.getInputStream()))){
+                List<UsersExportDTO> userExportDTOList = new CsvToBeanBuilder(reader)
+                        .withType(UsersExportDTO.class)
+                        .build()
+                        .parse();
+                logger.info("received list of users from file");
+                usersRepository.saveAll(exportService.getUsersFromUsersDto(userExportDTOList));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

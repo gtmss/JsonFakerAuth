@@ -31,3 +31,7 @@ logging:
   file:
     path: src/main/resoureces/faker.log
 
+
+csv:
+  filename: "jsonFakerUsers.csv"
+
