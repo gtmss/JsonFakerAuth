@@ -13,12 +13,12 @@
     <xs:element name="getUsersResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="users" type="tns:users1" maxOccurs="unbounded" minOccurs="0"/>
+                <xs:element name="users" type="tns:soapUsers" maxOccurs="unbounded" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="users1">
+    <xs:complexType name="soapUsers">
         <xs:sequence>
             <xs:element name="id" type="xs:long"/>
             <xs:element name="name" type="xs:string"/>
