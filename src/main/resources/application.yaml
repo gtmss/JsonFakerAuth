@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
-    username: gatman
-    password: gatman
+    username: postgres
+    password: postgres
 
   mvc:
     pathmatch:
@@ -25,7 +25,8 @@ server:
     key-store: src/main/resources/keystore/baeldung.p12
     key-store-password: gatman
     key-alias: baeldung
-    enabled: false
+    enabled: true
+
 
 
 
