@@ -2354,3 +2354,337 @@ Caused by: java.security.InvalidAlgorithmParameterException: the trustAnchors pa
 2023-01-03 12:11:08,439 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-01-03 12:11:08,443 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2023-01-03 12:11:08,460 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-10 21:02:07,095 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-10 21:02:07,111 INFO org.springframework.boot.StartupInfoLogger [main] Starting FakerWithAuthorizationApplication using Java 17.0.2 on gtmA485 with PID 20613 (/home/gtm/Desktop/JsonFakerAuth/target/classes started by gtm in /home/gtm/Desktop/JsonFakerAuth)
+2023-01-10 21:02:07,111 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-01-10 21:02:07,112 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 21:02:08,196 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-10 21:02:08,283 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 78 ms. Found 6 JPA repository interfaces.
+2023-01-10 21:02:08,687 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'SOAPConfig' of type [com.example.fakerwithauthorization.config.SOAPConfig$$EnhancerBySpringCGLIB$$5abcfcd0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:02:08,688 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c4071518] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:02:08,738 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-01-10 21:02:09,180 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (https)
+2023-01-10 21:02:09,189 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["https-jsse-nio-8080"]
+2023-01-10 21:02:09,190 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-01-10 21:02:09,191 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-10 21:02:09,310 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-01-10 21:02:09,311 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2132 ms
+2023-01-10 21:02:09,639 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-10 21:02:09,947 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-10 21:02:10,405 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to public
+2023-01-10 21:02:10,501 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2023-01-10 21:02:10,905 INFO liquibase.logging.core.JavaLogger [main] Reading from public.databasechangelog
+2023-01-10 21:02:11,006 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2023-01-10 21:02:11,097 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-10 21:02:11,154 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-10 21:02:11,322 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-10 21:02:11,459 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-10 21:02:12,321 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-10 21:02:12,330 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:02:12,720 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-10 21:02:13,836 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64c009b8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77510da, org.springframework.security.web.context.SecurityContextPersistenceFilter@61563a91, org.springframework.security.web.header.HeaderWriterFilter@e7c3ba2, org.springframework.web.filter.CorsFilter@570f96b7, org.springframework.security.web.authentication.logout.LogoutFilter@16fa28eb, com.example.fakerwithauthorization.security.jwt.AuthTokenFilter@57d8d8e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e1ffe54, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a72160a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dec84e3, org.springframework.security.web.session.SessionManagementFilter@20307cb9, org.springframework.security.web.access.ExceptionTranslationFilter@4873c645, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22a9fa23]
+2023-01-10 21:02:14,184 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["https-jsse-nio-8080"]
+2023-01-10 21:02:14,481 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (https) with context path ''
+2023-01-10 21:02:14,947 INFO org.springframework.boot.StartupInfoLogger [main] Started FakerWithAuthorizationApplication in 8.759 seconds (JVM running for 10.569)
+2023-01-10 21:03:42,867 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:03:42,869 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-10 21:03:42,879 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-10 21:12:28,543 INFO org.springframework.boot.StartupInfoLogger [main] Starting FakerWithAuthorizationApplicationTests using Java 17.0.2 on gtmA485 with PID 21569 (started by gtm in /home/gtm/Desktop/JsonFakerAuth)
+2023-01-10 21:12:28,545 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-01-10 21:12:28,546 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 21:12:28,548 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-10 21:12:29,827 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-10 21:12:30,002 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 157 ms. Found 6 JPA repository interfaces.
+2023-01-10 21:12:30,874 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'SOAPConfig' of type [com.example.fakerwithauthorization.config.SOAPConfig$$EnhancerBySpringCGLIB$$4fb4714d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:12:30,875 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$b8fe8995] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:12:30,927 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-01-10 21:12:31,652 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-10 21:12:32,176 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-10 21:12:32,912 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to public
+2023-01-10 21:12:33,479 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2023-01-10 21:12:34,060 INFO liquibase.logging.core.JavaLogger [main] Reading from public.databasechangelog
+2023-01-10 21:12:34,180 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2023-01-10 21:12:34,322 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-10 21:12:34,379 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-10 21:12:34,588 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-10 21:12:34,922 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-10 21:12:36,239 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-10 21:12:36,255 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:12:37,102 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-10 21:12:38,690 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38499139, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@240a9052, org.springframework.security.web.context.SecurityContextPersistenceFilter@520c235f, org.springframework.security.web.header.HeaderWriterFilter@2f2e75ae, org.springframework.web.filter.CorsFilter@2ca93dee, org.springframework.security.web.authentication.logout.LogoutFilter@708378cc, com.example.fakerwithauthorization.security.jwt.AuthTokenFilter@3aede2ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f31e47a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@642ebd4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@430abcad, org.springframework.security.web.session.SessionManagementFilter@17f4276b, org.springframework.security.web.access.ExceptionTranslationFilter@7424a39e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f66ab8f]
+2023-01-10 21:12:40,061 INFO org.springframework.boot.StartupInfoLogger [main] Started FakerWithAuthorizationApplicationTests in 12.04 seconds (JVM running for 13.387)
+2023-01-10 21:12:40,339 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:12:40,342 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-10 21:12:40,356 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-10 21:13:44,801 INFO org.springframework.boot.StartupInfoLogger [main] Starting FakerWithAuthorizationApplicationTests using Java 17.0.2 on gtmA485 with PID 21757 (started by gtm in /home/gtm/Desktop/JsonFakerAuth)
+2023-01-10 21:13:44,804 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-01-10 21:13:44,805 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 21:13:44,816 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-10 21:13:45,981 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-10 21:13:46,065 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 74 ms. Found 6 JPA repository interfaces.
+2023-01-10 21:13:46,584 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'SOAPConfig' of type [com.example.fakerwithauthorization.config.SOAPConfig$$EnhancerBySpringCGLIB$$a64288d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:13:46,586 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$73ae40d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:13:46,637 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-01-10 21:13:47,197 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-10 21:13:47,586 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-10 21:13:48,418 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to public
+2023-01-10 21:13:48,987 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2023-01-10 21:13:49,507 INFO liquibase.logging.core.JavaLogger [main] Reading from public.databasechangelog
+2023-01-10 21:13:49,634 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2023-01-10 21:13:49,757 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-10 21:13:49,817 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-10 21:13:49,999 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-10 21:13:50,209 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-10 21:13:51,293 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-10 21:13:51,309 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:13:52,110 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-10 21:13:53,832 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5f7a2a79, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65f1bf2c, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f31e47a, org.springframework.security.web.header.HeaderWriterFilter@439c706, org.springframework.web.filter.CorsFilter@48186ba8, org.springframework.security.web.authentication.logout.LogoutFilter@1082883b, com.example.fakerwithauthorization.security.jwt.AuthTokenFilter@4bdd6fe0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@793577e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73e21fb5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@286f8e90, org.springframework.security.web.session.SessionManagementFilter@1548dc37, org.springframework.security.web.access.ExceptionTranslationFilter@12a0f131, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d8802cf]
+2023-01-10 21:13:55,135 INFO org.springframework.boot.StartupInfoLogger [main] Started FakerWithAuthorizationApplicationTests in 10.831 seconds (JVM running for 12.17)
+2023-01-10 21:13:55,450 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:13:55,454 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-10 21:13:55,470 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-10 21:17:34,511 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-10 21:17:34,518 INFO org.springframework.boot.StartupInfoLogger [main] Starting FakerWithAuthorizationApplicationTests using Java 17.0.2 on gtmA485 with PID 22087 (started by gtm in /home/gtm/Desktop/JsonFakerAuth)
+2023-01-10 21:17:34,520 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-01-10 21:17:34,521 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 21:17:35,834 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-10 21:17:35,949 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 103 ms. Found 6 JPA repository interfaces.
+2023-01-10 21:17:36,527 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'SOAPConfig' of type [com.example.fakerwithauthorization.config.SOAPConfig$$EnhancerBySpringCGLIB$$a16d770d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:17:36,528 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ab78f55] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:17:36,592 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-01-10 21:17:37,201 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-10 21:17:37,622 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-10 21:17:37,938 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to public
+2023-01-10 21:17:38,078 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2023-01-10 21:17:38,462 INFO liquibase.logging.core.JavaLogger [main] Reading from public.databasechangelog
+2023-01-10 21:17:38,660 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2023-01-10 21:17:38,896 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-10 21:17:38,976 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-10 21:17:39,173 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-10 21:17:39,309 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-10 21:17:40,179 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-10 21:17:40,189 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:17:40,788 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-10 21:17:43,516 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2a7b4b19, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26415b5e, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ef12d7e, org.springframework.security.web.header.HeaderWriterFilter@73c25e8, org.springframework.web.filter.CorsFilter@61761e60, org.springframework.security.web.authentication.logout.LogoutFilter@520c235f, com.example.fakerwithauthorization.security.jwt.AuthTokenFilter@685a3c14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1dfadb7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2526ecb7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7aca4144, org.springframework.security.web.session.SessionManagementFilter@6f371390, org.springframework.security.web.access.ExceptionTranslationFilter@186f7553, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8caffbd]
+2023-01-10 21:17:45,238 INFO org.springframework.boot.StartupInfoLogger [main] Started FakerWithAuthorizationApplicationTests in 11.394 seconds (JVM running for 12.925)
+2023-01-10 21:17:45,573 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:17:45,576 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-10 21:17:45,591 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-10 21:21:38,045 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-10 21:21:38,058 INFO org.springframework.boot.StartupInfoLogger [main] Starting FakerWithAuthorizationApplication using Java 17.0.2 on gtmA485 with PID 22675 (/home/gtm/Desktop/JsonFakerAuth/target/classes started by gtm in /home/gtm/Desktop/JsonFakerAuth)
+2023-01-10 21:21:38,059 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-01-10 21:21:38,061 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 21:21:39,287 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-10 21:21:39,364 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 69 ms. Found 6 JPA repository interfaces.
+2023-01-10 21:21:39,736 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'SOAPConfig' of type [com.example.fakerwithauthorization.config.SOAPConfig$$EnhancerBySpringCGLIB$$91fae526] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:21:39,737 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$fb44fd6e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:21:39,773 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-01-10 21:21:40,215 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (https)
+2023-01-10 21:21:40,225 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["https-jsse-nio-8080"]
+2023-01-10 21:21:40,226 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-01-10 21:21:40,227 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-10 21:21:40,347 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-01-10 21:21:40,348 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2180 ms
+2023-01-10 21:21:40,706 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-10 21:21:41,016 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-10 21:21:41,232 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to public
+2023-01-10 21:21:41,361 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2023-01-10 21:21:41,746 INFO liquibase.logging.core.JavaLogger [main] Reading from public.databasechangelog
+2023-01-10 21:21:41,830 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2023-01-10 21:21:41,912 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-10 21:21:41,967 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-10 21:21:42,244 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-10 21:21:42,417 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-10 21:21:43,243 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-10 21:21:43,252 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:21:43,679 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-10 21:21:44,781 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@63fcbf75, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@663d59ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@e7c3ba2, org.springframework.security.web.header.HeaderWriterFilter@684001e6, org.springframework.web.filter.CorsFilter@64d49e35, org.springframework.security.web.authentication.logout.LogoutFilter@12fbc568, com.example.fakerwithauthorization.security.jwt.AuthTokenFilter@70c6c6a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6351efa6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f9e38d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@665902eb, org.springframework.security.web.session.SessionManagementFilter@7d28d525, org.springframework.security.web.access.ExceptionTranslationFilter@4a28b6d0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@665fb1d8]
+2023-01-10 21:21:45,106 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["https-jsse-nio-8080"]
+2023-01-10 21:21:45,324 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (https) with context path ''
+2023-01-10 21:21:45,858 INFO org.springframework.boot.StartupInfoLogger [main] Started FakerWithAuthorizationApplication in 9.02 seconds (JVM running for 10.494)
+2023-01-10 21:27:14,364 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:27:14,366 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-10 21:27:14,377 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-10 21:27:20,093 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-10 21:27:20,098 INFO org.springframework.boot.StartupInfoLogger [main] Starting FakerWithAuthorizationApplication using Java 17.0.2 on gtmA485 with PID 23585 (/home/gtm/Desktop/JsonFakerAuth/target/classes started by gtm in /home/gtm/Desktop/JsonFakerAuth)
+2023-01-10 21:27:20,099 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-01-10 21:27:20,100 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 21:27:21,223 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-10 21:27:21,306 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 72 ms. Found 6 JPA repository interfaces.
+2023-01-10 21:27:21,682 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'SOAPConfig' of type [com.example.fakerwithauthorization.config.SOAPConfig$$EnhancerBySpringCGLIB$$8f411d76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:27:21,683 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f88b35be] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:27:21,719 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-01-10 21:27:22,129 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-10 21:27:22,143 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-10 21:27:22,144 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-01-10 21:27:22,145 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-10 21:27:22,332 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-01-10 21:27:22,333 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2167 ms
+2023-01-10 21:27:22,737 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-10 21:27:23,017 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-10 21:27:23,571 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to public
+2023-01-10 21:27:23,682 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2023-01-10 21:27:24,067 INFO liquibase.logging.core.JavaLogger [main] Reading from public.databasechangelog
+2023-01-10 21:27:24,164 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2023-01-10 21:27:24,242 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-10 21:27:24,295 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-10 21:27:24,457 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-10 21:27:24,658 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-10 21:27:25,762 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-10 21:27:25,771 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:27:26,297 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-10 21:27:27,482 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@56d9ef05, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d487147, org.springframework.security.web.context.SecurityContextPersistenceFilter@720cbb7d, org.springframework.security.web.header.HeaderWriterFilter@4bdec54, org.springframework.web.filter.CorsFilter@4fa2991, org.springframework.security.web.authentication.logout.LogoutFilter@54a2ff94, com.example.fakerwithauthorization.security.jwt.AuthTokenFilter@183e8c8a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a72160a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7eeabaf3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53b10e9a, org.springframework.security.web.session.SessionManagementFilter@4e1ffe54, org.springframework.security.web.access.ExceptionTranslationFilter@6c07666f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e8bd42f]
+2023-01-10 21:27:27,792 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-10 21:27:27,810 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-10 21:27:28,350 INFO org.springframework.boot.StartupInfoLogger [main] Started FakerWithAuthorizationApplication in 8.943 seconds (JVM running for 9.875)
+2023-01-10 21:27:30,385 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-10 21:27:30,386 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-01-10 21:27:30,389 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-01-10 21:27:30,454 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-1] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:30,552 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-2] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:31,463 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-3] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:31,510 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-4] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:32,406 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-5] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:32,449 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-6] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:33,451 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-7] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:33,490 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-8] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:33,661 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-9] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:33,701 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-10] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:33,829 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-1] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:33,864 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-2] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:33,998 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-3] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,037 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-4] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,171 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-5] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,210 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-6] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,347 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-7] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,385 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-8] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,523 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-9] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,564 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-10] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,723 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-1] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,762 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-2] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,899 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-3] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:34,946 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-4] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:35,091 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-5] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:27:35,128 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-6] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:29:36,265 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:29:36,267 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-10 21:29:36,279 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-10 21:29:41,530 INFO org.springframework.boot.StartupInfoLogger [main] Starting FakerWithAuthorizationApplication using Java 17.0.2 on gtmA485 with PID 24116 (/home/gtm/Desktop/JsonFakerAuth/target/classes started by gtm in /home/gtm/Desktop/JsonFakerAuth)
+2023-01-10 21:29:41,529 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-10 21:29:41,533 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-01-10 21:29:41,534 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 21:29:42,644 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-10 21:29:42,711 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 58 ms. Found 6 JPA repository interfaces.
+2023-01-10 21:29:43,109 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'SOAPConfig' of type [com.example.fakerwithauthorization.config.SOAPConfig$$EnhancerBySpringCGLIB$$9023a2fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:29:43,110 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f96dbb42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:29:43,151 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-01-10 21:29:43,543 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-10 21:29:43,553 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-10 21:29:43,555 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-01-10 21:29:43,555 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-10 21:29:43,679 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-01-10 21:29:43,679 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2069 ms
+2023-01-10 21:29:44,023 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-10 21:29:44,315 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-10 21:29:44,515 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to public
+2023-01-10 21:29:44,649 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2023-01-10 21:29:44,996 INFO liquibase.logging.core.JavaLogger [main] Reading from public.databasechangelog
+2023-01-10 21:29:45,103 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2023-01-10 21:29:45,195 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-10 21:29:45,244 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-10 21:29:45,385 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-10 21:29:45,537 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-10 21:29:46,414 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-10 21:29:46,422 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:29:46,820 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-10 21:29:47,920 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d487147, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fa2991, org.springframework.security.web.context.SecurityContextPersistenceFilter@720cbb7d, org.springframework.security.web.header.HeaderWriterFilter@4bdec54, org.springframework.web.filter.CorsFilter@53b10e9a, org.springframework.security.web.authentication.logout.LogoutFilter@54a2ff94, com.example.fakerwithauthorization.security.jwt.AuthTokenFilter@4a66949a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a72160a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7eeabaf3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a89722e, org.springframework.security.web.session.SessionManagementFilter@4e1ffe54, org.springframework.security.web.access.ExceptionTranslationFilter@6c07666f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46219104]
+2023-01-10 21:29:48,249 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-10 21:29:48,277 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-10 21:29:48,780 INFO org.springframework.boot.StartupInfoLogger [main] Started FakerWithAuthorizationApplication in 7.991 seconds (JVM running for 8.878)
+2023-01-10 21:29:51,420 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-10 21:29:51,421 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-01-10 21:29:51,425 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-01-10 21:29:51,664 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-2] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:29:54,816 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-4] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:29:58,047 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-6] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:30:27,823 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:30:27,826 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-10 21:30:27,838 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-10 21:30:33,261 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-10 21:30:33,281 INFO org.springframework.boot.StartupInfoLogger [main] Starting FakerWithAuthorizationApplication using Java 17.0.2 on gtmA485 with PID 24308 (/home/gtm/Desktop/JsonFakerAuth/target/classes started by gtm in /home/gtm/Desktop/JsonFakerAuth)
+2023-01-10 21:30:33,282 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-01-10 21:30:33,282 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 21:30:34,327 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-10 21:30:34,400 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 64 ms. Found 6 JPA repository interfaces.
+2023-01-10 21:30:34,817 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'SOAPConfig' of type [com.example.fakerwithauthorization.config.SOAPConfig$$EnhancerBySpringCGLIB$$1b9541b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:30:34,818 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$84df59fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:30:34,856 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-01-10 21:30:35,265 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-10 21:30:35,274 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-10 21:30:35,275 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-01-10 21:30:35,275 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-10 21:30:35,399 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-01-10 21:30:35,400 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2063 ms
+2023-01-10 21:30:35,732 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-10 21:30:36,028 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-10 21:30:36,291 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to public
+2023-01-10 21:30:36,406 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2023-01-10 21:30:36,796 INFO liquibase.logging.core.JavaLogger [main] Reading from public.databasechangelog
+2023-01-10 21:30:36,896 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2023-01-10 21:30:37,029 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-10 21:30:37,086 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-10 21:30:37,273 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-10 21:30:37,429 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-10 21:30:38,263 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-10 21:30:38,272 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:30:38,710 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-10 21:30:40,096 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53b10e9a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a89722e, org.springframework.security.web.context.SecurityContextPersistenceFilter@5632bed3, org.springframework.security.web.header.HeaderWriterFilter@5fe5f2f0, org.springframework.web.filter.CorsFilter@7475f071, org.springframework.security.web.authentication.logout.LogoutFilter@38ebf8dc, com.example.fakerwithauthorization.security.jwt.AuthTokenFilter@4700db93, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19a2b224, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62036b05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2116e9cf, org.springframework.security.web.session.SessionManagementFilter@7310bc90, org.springframework.security.web.access.ExceptionTranslationFilter@6b3bcab7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77510da]
+2023-01-10 21:30:40,408 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-10 21:30:40,426 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-10 21:30:40,887 INFO org.springframework.boot.StartupInfoLogger [main] Started FakerWithAuthorizationApplication in 8.341 seconds (JVM running for 9.199)
+2023-01-10 21:30:43,295 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:30:43,298 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-10 21:30:43,307 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-10 21:30:48,374 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-10 21:30:48,387 INFO org.springframework.boot.StartupInfoLogger [main] Starting FakerWithAuthorizationApplication using Java 17.0.2 on gtmA485 with PID 24463 (/home/gtm/Desktop/JsonFakerAuth/target/classes started by gtm in /home/gtm/Desktop/JsonFakerAuth)
+2023-01-10 21:30:48,387 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-01-10 21:30:48,388 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 21:30:49,491 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-10 21:30:49,571 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 70 ms. Found 6 JPA repository interfaces.
+2023-01-10 21:30:49,999 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'SOAPConfig' of type [com.example.fakerwithauthorization.config.SOAPConfig$$EnhancerBySpringCGLIB$$c10a05c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:30:50,000 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$2a541e0d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-10 21:30:50,044 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-01-10 21:30:50,450 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-10 21:30:50,461 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-10 21:30:50,462 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-01-10 21:30:50,463 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-10 21:30:50,616 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-01-10 21:30:50,616 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2173 ms
+2023-01-10 21:30:50,988 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-10 21:30:51,245 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-10 21:30:51,503 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to public
+2023-01-10 21:30:51,619 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2023-01-10 21:30:51,995 INFO liquibase.logging.core.JavaLogger [main] Reading from public.databasechangelog
+2023-01-10 21:30:52,115 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2023-01-10 21:30:52,187 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-10 21:30:52,235 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-01-10 21:30:52,374 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-10 21:30:52,498 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-10 21:30:53,233 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-10 21:30:53,242 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 21:30:53,612 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-10 21:30:54,612 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5524e471, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b6d94fc, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ba5d307, org.springframework.security.web.header.HeaderWriterFilter@38cd7531, org.springframework.web.filter.CorsFilter@71c77042, org.springframework.security.web.authentication.logout.LogoutFilter@19a2b224, com.example.fakerwithauthorization.security.jwt.AuthTokenFilter@7a8d6eb3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a28b6d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ff584d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@665fb1d8, org.springframework.security.web.session.SessionManagementFilter@446dbf7b, org.springframework.security.web.access.ExceptionTranslationFilter@63c6579, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f2df380]
+2023-01-10 21:30:54,905 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-10 21:30:54,919 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-10 21:30:55,408 INFO org.springframework.boot.StartupInfoLogger [main] Started FakerWithAuthorizationApplication in 7.702 seconds (JVM running for 8.648)
+2023-01-10 21:30:57,211 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-10 21:30:57,211 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-01-10 21:30:57,215 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-01-10 21:30:57,280 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-1] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:30:57,383 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-2] Unauthorized error: Full authentication is required to access this resource
+2023-01-10 21:31:04,835 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Initializing Spring MessageDispatcherServlet 'messageDispatcherServlet'
+2023-01-10 21:31:04,836 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Initializing Servlet 'messageDispatcherServlet'
+2023-01-10 21:31:04,846 INFO org.springframework.ws.soap.saaj.SaajSoapMessageFactory [http-nio-8080-exec-3] Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-01-10 21:31:04,850 WARN javax.xml.soap.FactoryFinder [http-nio-8080-exec-3] Using deprecated META-INF/services mechanism with non-standard property: javax.xml.soap.MetaFactory. Property javax.xml.soap.SAAJMetaFactory should be used instead.
+2023-01-10 21:31:04,868 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed initialization in 32 ms
+2023-01-10 21:31:05,127 ERROR com.example.fakerwithauthorization.security.jwt.AuthEntryPointJwt [http-nio-8080-exec-4] Unauthorized error: Full authentication is required to access this resource

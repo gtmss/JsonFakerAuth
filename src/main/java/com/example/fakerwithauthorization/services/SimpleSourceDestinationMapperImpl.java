@@ -6,11 +6,12 @@ import com.example.fakerwithauthorization.mapper.SimpleSourceDestinationMapper;
 import com.example.fakerwithauthorization.models.Address;
 import com.example.fakerwithauthorization.models.Company;
 import com.example.fakerwithauthorization.models.Users;
+
 import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-12-29T11:09:04+0200",
+    date = "2023-01-10T21:19:24+0200",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
 public class SimpleSourceDestinationMapperImpl implements SimpleSourceDestinationMapper {
@@ -107,6 +108,7 @@ public class SimpleSourceDestinationMapperImpl implements SimpleSourceDestinatio
             company1.setId( company.getId() );
         }
         company1.setName( company.getName() );
+        company1.setCatchPhrase( company.getCatchPhrase() );
         company1.setBs( company.getBs() );
 
         return company1;
@@ -152,6 +154,7 @@ public class SimpleSourceDestinationMapperImpl implements SimpleSourceDestinatio
 
         company1.setId( company.getId() );
         company1.setName( company.getName() );
+        company1.setCatchPhrase( company.getCatchPhrase() );
         company1.setBs( company.getBs() );
 
         return company1;
