@@ -37,7 +37,7 @@ public class SOAPConfig extends WsConfigurerAdapter {
         Wss4jSecurityInterceptor securityInterceptor = new Wss4jSecurityInterceptor();
 
         // validate incoming request
-        securityInterceptor.setValidationActions("Timestamp Signature");
+        securityInterceptor.setValidationActions("Signature Timestamp");
         securityInterceptor.setValidationSignatureCrypto(getCryptoFactoryBean().getObject());
         securityInterceptor.setValidationDecryptionCrypto(getCryptoFactoryBean().getObject());
         securityInterceptor.setValidationCallbackHandler(securityCallbackHandler());
@@ -49,7 +49,7 @@ public class SOAPConfig extends WsConfigurerAdapter {
         securityInterceptor.setSecurementEncryptionCrypto(getCryptoFactoryBean().getObject());
 
         // sign the response
-        securityInterceptor.setSecurementActions("Signature Encrypt");
+        securityInterceptor.setSecurementActions("Signature Timestamp");
         securityInterceptor.setSecurementUsername("server");
         securityInterceptor.setSecurementPassword("gatman");
         securityInterceptor.setSecurementSignatureCrypto(getCryptoFactoryBean().getObject());
