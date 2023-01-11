@@ -63,7 +63,7 @@
         <xs:sequence>
             <xs:element name="id" type="xs:long"/>
             <xs:element name="name" type="xs:string"/>
-            <xs:element name="cathphrase" type="xs:string"/>
+            <xs:element name="catchPhrase" type="xs:string"/>
             <xs:element name="bs" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>

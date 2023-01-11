@@ -25,7 +25,7 @@ server:
     key-store: src/main/resources/keystore/baeldung.p12
     key-store-password: gatman
     key-alias: baeldung
-    enabled: true
+    enabled: false
 
 
 
