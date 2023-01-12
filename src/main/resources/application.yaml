@@ -27,9 +27,9 @@ server:
     key-alias: baeldung
     enabled: false
 
-
-
-
+users:
+  username: admin
+  password: password
 
 
 faker:
