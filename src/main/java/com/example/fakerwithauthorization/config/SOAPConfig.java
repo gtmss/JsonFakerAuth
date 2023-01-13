@@ -26,7 +26,6 @@ import java.util.List;
 public class SOAPConfig extends WsConfigurerAdapter {
 
 
-
     @Bean
     public KeyStoreCallbackHandler securityCallbackHandler(){
         KeyStoreCallbackHandler callbackHandler = new KeyStoreCallbackHandler();
