@@ -1,32 +1,28 @@
 package com.example.fakerwithauthorization.controllers;
 
-import io.minio.ListObjectsArgs;
+import com.example.fakerwithauthorization.services.MinioAdapterService;
 import io.minio.MinioClient;
-import io.minio.errors.*;
-import io.minio.messages.Bucket;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.util.List;
+import javax.transaction.Transactional;
 
 @RestController
 @RequestMapping("api/minio")
 public class MinioController {
 
-    private final MinioClient minioClient;
+    private final MinioAdapterService minioAdapterService;
 
-    public MinioController(MinioClient minioClient) {
-        this.minioClient = minioClient;
+    public MinioController(MinioAdapterService minioAdapterService) {
+        this.minioAdapterService = minioAdapterService;
+
     }
 
-    @GetMapping
-    ResponseEntity<List<String>> listBuckets() throws ServerException, InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
-        List<String> bucketList = minioClient.listObjects(ListObjectsArgs.builder().build())
-        return ResponseEntity.ok().body(bucketList.stream().map(bucket -> bucket.name()).toList());
+    @PostMapping
+    @Transactional
+    public ResponseEntity<?> uploadFile(@ModelAttribute MultipartFile file) {
+        minioAdapterService.uplaodFile(file);
+        return ResponseEntity.ok("Ok");
     }
 }

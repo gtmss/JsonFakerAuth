@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: postgres
+    username: gatman
+    password: gatman
 
   mvc:
     pathmatch:
@@ -28,7 +28,7 @@ server:
     enabled: false
 
 minio:
-  url: https://play.min.io
+  url: http://localhost:9003
   bucket: mesio
   access-key: Q3AM3UQ867SPQQA43P2F
   secret-key: zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG
