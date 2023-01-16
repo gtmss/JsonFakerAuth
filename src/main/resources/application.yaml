@@ -27,9 +27,11 @@ server:
     key-alias: baeldung
     enabled: false
 
-users:
-  username: admin
-  password: password
+minio:
+  url: http://localhost:9000
+  bucket: mesio
+  access-key: access_key
+  secret-key: secret_key
 
 
 faker:
@@ -44,4 +46,5 @@ logging:
 
 csv:
   filename: "jsonFakerUsers.csv"
+
 
