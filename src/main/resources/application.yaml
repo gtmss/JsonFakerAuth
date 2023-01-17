@@ -19,6 +19,12 @@ spring:
       starttls.enable: true
       ssl.trust: smtp.gmail.com
 
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+
 server:
   ssl:
     key-store-type: PKCS12

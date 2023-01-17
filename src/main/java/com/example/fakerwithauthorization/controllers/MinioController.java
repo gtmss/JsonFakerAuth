@@ -2,6 +2,7 @@ package com.example.fakerwithauthorization.controllers;
 
 import com.example.fakerwithauthorization.services.MinioAdapterService;
 import io.minio.MinioClient;
+import io.minio.SnowballObject;
 import org.apache.commons.compress.utils.IOUtils;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +12,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import static org.springframework.web.servlet.HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE;
 
@@ -42,6 +45,12 @@ public class MinioController {
         System.out.println(minioAdapterService.getAllBuckets());
         minioAdapterService.uploadFile(file);
         return ResponseEntity.ok("Ok");
+    }
+
+    @PostMapping("/multiple")
+    public ResponseEntity<?> uploadMultiple(@RequestBody MultipartFile[] files) {
+        minioAdapterService.uploadMultiple(files);
+        return ResponseEntity.ok("OK!Upladed.");
     }
 
     @DeleteMapping("/{filename}")
